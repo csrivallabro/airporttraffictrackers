@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    command: npm run dev
+    ports: ["8080:8080"]
+    env_file: [.env, ./backend/.env]
+    working_dir: /app
+    volumes: ["./backend:/app", "/app/node_modules"]
+  frontend:
+    build: ./frontend
+    command: npm run dev
+    ports: ["5173:5173"]
+    env_file: [.env, ./frontend/.env]
+    working_dir: /app
+    volumes: ["./frontend:/app", "/app/node_modules"]

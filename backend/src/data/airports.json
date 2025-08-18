@@ -1,0 +1,63 @@
+{
+  "LAX": {
+    "name": "Los Angeles International Airport",
+    "lat": 33.9416,
+    "lng": -118.4085,
+    "defaults": {
+      "parkingTransferMin": 15,
+      "checkInCarryOnMin": 5,
+      "checkInBagDropMin": 15,
+      "walkToGateMin": 12
+    },
+    "probes": [
+      {
+        "id": "lax_loop_in",
+        "o": { "lat": 33.9466, "lng": -118.4012 },
+        "d": { "lat": 33.9438, "lng": -118.4087 },
+        "freeFlowSec": 300,
+        "weight": 1.2
+      },
+      {
+        "id": "lax_arrivals_loop",
+        "o": { "lat": 33.9439, "lng": -118.4106 },
+        "d": { "lat": 33.9422, "lng": -118.4025 },
+        "freeFlowSec": 360,
+        "weight": 1.0
+      },
+      {
+        "id": "lax_parking_link",
+        "o": { "lat": 33.9457, "lng": -118.4107 },
+        "d": { "lat": 33.9443, "lng": -118.4074 },
+        "freeFlowSec": 180,
+        "weight": 0.8
+      }
+    ]
+  },
+  "SFO": {
+    "name": "San Francisco International Airport",
+    "lat": 37.6213,
+    "lng": -122.379,
+    "defaults": {
+      "parkingTransferMin": 12,
+      "checkInCarryOnMin": 5,
+      "checkInBagDropMin": 15,
+      "walkToGateMin": 10
+    },
+    "probes": [
+      {
+        "id": "sfo_departures_ramp",
+        "o": { "lat": 37.6168, "lng": -122.3927 },
+        "d": { "lat": 37.6169, "lng": -122.3863 },
+        "freeFlowSec": 240,
+        "weight": 1.2
+      },
+      {
+        "id": "sfo_intl_connector",
+        "o": { "lat": 37.6157, "lng": -122.3879 },
+        "d": { "lat": 37.6153, "lng": -122.3825 },
+        "freeFlowSec": 210,
+        "weight": 1.0
+      }
+    ]
+  }
+}
